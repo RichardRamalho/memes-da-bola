@@ -1,0 +1,175 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Roboto Mono', monospace;*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* fonte*/
+  font-size: 62.5%;
+  --ff-body:'Open Sans', sans-serif;
+  --ff-main:'Roboto Mono', monospace;
+  /* color*/
+  --color-01-blue: rgb(28, 29, 61);
+  --color-main: hsla(212, 23%, 89%, 1);
+  --color-bg: rgb(21, 41, 128);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray: rgba(73, 80, 87, 0.5);
+}
+
+body {
+  background: linear-gradient(45deg, #0E2954 0%, #1F6E8C 50%, #84A7A1 100%);
+  background-size: 200% 200%;
+  animation: gradient 5s ease infinite;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: var(--color-main);
+  font-family: var(--ff-main);
+  text-align: center;
+  align-items: center;
+  padding: 4.8rem 6.4rem;
+  width: 42.5rem;
+  
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  margin: auto;
+}
+
+.hide {
+  display: none;
+}
+
+/*screen-1*/
+.screen1 {
+  width: 30rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--ff-main);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 1.8rem;
+  color: var(--color-01-blue);
+}
+
+p {
+  font-size: 1.8rem;
+  font-family: var(--ff-body);
+  font-weight: 400;
+  color: var(--color-01-blue);
+  margin-bottom: 2.6rem;
+  text-align: center;
+}
+
+#closedBall {
+  width: 20rem;
+}
+
+#closedBall:hover {
+  cursor: pointer;
+  animation-name: quique;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: none;
+}
+
+/*screen-2*/
+.screen2 {
+  width: 30rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-family: var(--ff-main);
+  color: var(--color-01-blue);
+  margin-bottom: 1.8rem;
+}
+
+.screen2 #randomPhrase {
+  background: #b3c5ce;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+  font-family: var(--ff-main);
+  font-weight: 400;
+  color: black;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2.4rem;
+  animation: downtop 900ms;
+}
+
+#openBall {
+  width: 15rem;
+  margin-bottom: 2.4rem;
+}
+
+.screen2 button {
+  background-color: rgb(21, 41, 128);
+  color: white;
+  font-family: var(--ff-main);
+  font-weight: 400;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1.6rem;
+  width: 17.4rem;
+  height: 6.2rem;
+}
+
+.screen2 button:hover {
+  background-color:rgb(12, 26, 88);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} 
+
+@keyframes quique {
+  0% {
+    transform: translateY(20px);
+  }
+  
+  50% {
+    transform: translateY(25px);
+  }
+  
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes downtop {
+  0% {
+      opacity: 0;
+      transform: translateY(+15px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translatey(0)
+  }
+}
